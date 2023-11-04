@@ -1,0 +1,35 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+.moving{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+}
+
+.moving .moving-bg{
+  box-sizing:  content-box;
+  padding-bottom: 300px;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url('https://github.com/mathsfun/maths/blob/main/images/mainbg.gif');
+  background-size: cover;
+  /* animation: moving 30s linear infinite; */
+}
+
+
+/* @keyframes moving {
+  from{
+    transform: translateY(0)
+  }
+  to {
+    transform: translateY(-300px)
+  }
+} */
