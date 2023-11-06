@@ -1,50 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Simple Car Game</title>
-  <style>
-    #car {
-      position: absolute;
-      width: 50px;
-      height: 100px;
-      background-color: red;
-    }
-  </style>
+    <meta charset="UTF-8"/>
+    <title>Racing Maths</title>
+  ## i forgot who by lol sry ##
+
+    <style>
+        body {
+            padding:120px;
+        }
+    </style>
 </head>
 <body>
-  <div id="car"></div>
-  
-  <script>
-    var car = document.getElementById("car");
-    var gameArea = document.body;
-    
-    var carPositionX = 0;
-    
-    // Function to move the car to the right
-    function moveRight() {
-      carPositionX += 10;
-      car.style.left = carPositionX + "px";
-    }
-    
-    // Function to move the car to the left
-    function moveLeft() {
-      carPositionX -= 10;
-      car.style.left = carPositionX + "px";
-    }
-    
-    // Event listener for arrow key presses
-    window.addEventListener("keydown", function(event) {
-      if (event.key === "ArrowRight") {
-        moveRight();
-      } else if (event.key === "ArrowLeft") {
-        moveLeft();
-      }
-    });
-    
-    // Game loop to continuously move the car
-    setInterval(function() {
-      moveRight();
-    }, 500);
-  </script>
+ 
+    <div id="readme"></div>
+ 
+    <script src="http://code.jquery.com/jquery.min.js"></script>
+    <script src="js/Markdown.Converter.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function jQueryReady($) {
+            var converter = new Markdown.Converter(),
+                /* Alias the conversion method to make it easier to swap libraries in the future. */
+                markdownToHtml = converter.makeHtml;
+ 
+            $.get("README.md").success(function (data) {
+                $("#readme").html(markdownToHtml(data));
+            });
+        });
+    </script>
+
+    <!-- GitHub Snippet -->
+    <a href="https://hexgl.bkcore.com/play/"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://camo.githubusercontent.com/82b228a3648bf44fc1163ef44c62fcc60081495e/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f6c6566745f7265645f6161303030302e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_left_red_aa0000.png"></a>
+ 
 </body>
 </html>
