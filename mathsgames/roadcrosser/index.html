@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<title>Crozzy Street</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="https://cdn.html5gameportal.com/wortal-sdk/wortal-core-1.2.0.js"></script>
+	<script src="three.js"></script>
+</head>
+<body>
+	<div id="counter">0</div>
+	<div id="controlls">
+		<div>
+			<button id="forward">
+				<svg width="50" height="50" viewBox="0 0 10 10">
+					<g transform="rotate(0, 5,5)">
+						<path d="M5,4 L7,6 L3,6 L5,4" />
+					</g>
+				</svg>
+			</button>
+			<button id="left">
+				<svg width="50" height="50" viewBox="0 0 10 10">
+					<g transform="rotate(-90, 5,5)">
+						<path d="M5,4 L7,6 L3,6 L5,4" />
+					</g>
+				</svg>
+			</button>
+			<button id="backward">
+				<svg width="50" height="50" viewBox="0 0 10 10">
+					<g transform="rotate(180, 5,5)">
+						<path d="M5,4 L7,6 L3,6 L5,4" />
+					</g>
+				</svg>
+			</button>
+			<button id="right">
+				<svg width="50" height="50" viewBox="0 0 10 10">
+					<g transform="rotate(90, 5,5)">
+						<path d="M5,4 L7,6 L3,6 L5,4" />
+					</g>
+				</svg>
+			</button>
+		</div>
+	</div>
+	<div id="start">
+		<button id="play" class="i18nElem">Play</button>
+	</div>
+	<div id="end">
+		<button id="retry" class="i18nElem">Retry</button>
+	</div>
+	<script src="index.js"></script>
+</body>
